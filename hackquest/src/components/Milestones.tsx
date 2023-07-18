@@ -30,15 +30,17 @@ export default function Milestones() {
 							fill='#232323'
 						/>
 					</svg>
-					<span className='text-white ml-[17.5px] text-sm'>
+					<span className='text-white ml-[17.5px] text-sm break-all'>
 						Complete 3 Syntax
 					</span>
 
-					<div className='ml-[60px] flex'>
+					<div className='w-[40px] ml-[60px] flex items-center'>
 						<Image height={20} width={20} src='/imgs/Sphere4.png' alt='' />
-						<span className='text-white ml-[4px] text-sm'>25</span>
+						<span className='text-white ml-[4px] text-sm inline-block align-middle'>
+							{Math.ceil(Math.random() * 100)}
+						</span>
 					</div>
-					<div className='relative ml-[66px] mr-[40px] flex items-center'>
+					<div className='relative ml-[62px] mr-[40px] flex items-center'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							width='275'
@@ -66,7 +68,7 @@ export default function Milestones() {
 						</svg>
 						<span className='text-white ml-[12px] text-sm'>1/3</span>
 					</div>
-					<div className='w-[143px] h-[40px] rounded-[12px] text-[#EDEDED] flex justify-center items-center bg-gradient-to-r from-[#353535] to-[#2E2E2E] cursor-pointer text-sm'>
+					<div className='w-[143px] h-[40px] rounded-[12px] text-[#EDEDED] flex justify-center items-center bg-gradient-to-r from-[#353535] to-[#2E2E2E] cursor-pointer text-sm align-bottom'>
 						Start Learning
 					</div>
 				</div>
@@ -81,12 +83,13 @@ export default function Milestones() {
 
 			<Tabs
 				defaultValue='Course Completion'
+				className='inline-flex  flex-col  items-end  '
 				onValueChange={e => {
 					console.log(e)
 					setActive(e)
 				}}
 			>
-				<TabsList className='w-full inline-flex justify-start items-center'>
+				<TabsList className='inline-flex justify-end items-center  '>
 					<TabsTrigger value='Course Completion'>
 						{active === 'Course Completion'
 							? '<Course Completion/>'
@@ -104,6 +107,16 @@ export default function Milestones() {
 					</TabsTrigger>
 				</TabsList>
 				<TabsContent value='Course Completion'>
+					<div className='mt-[32px] h-[200px] overflow-y-auto'>
+						{createlist()}
+					</div>
+				</TabsContent>
+				<TabsContent value='Quest Winning Streak'>
+					<div className='mt-[32px] h-[200px] overflow-y-auto'>
+						{createlist()}
+					</div>
+				</TabsContent>
+				<TabsContent value='Track Completion'>
 					<div className='mt-[32px] h-[200px] overflow-y-auto'>
 						{createlist()}
 					</div>
