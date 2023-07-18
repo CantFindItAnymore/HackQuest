@@ -40,7 +40,7 @@ export default function Milestones() {
 							{Math.ceil(Math.random() * 100)}
 						</span>
 					</div>
-					<div className='relative ml-[62px] mr-[40px] flex items-center'>
+					<div className='relative ml-[62px] mr-[45px] flex items-center'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							width='275'
